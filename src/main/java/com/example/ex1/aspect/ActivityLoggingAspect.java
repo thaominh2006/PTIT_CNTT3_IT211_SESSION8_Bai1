@@ -27,7 +27,6 @@ public class ActivityLoggingAspect {
                 + " performed " + action
                 + " successfully. SKU: " + sku
                 + ". Quantity changed: " + quantity;
-
         InventoryLog log = InventoryLog.builder().timestamp(LocalDateTime.now()).username(username).action(action).detail(detail).build();
         inventoryLogRepository.save(log);
     }

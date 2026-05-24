@@ -10,7 +10,7 @@ public class SecurityAspect {
             "&& args(id, username, role)")
     public void checkAdminPermission(Long id, String username, String role) {
         if (!"ADMIN".equalsIgnoreCase(role)) {
-            throw new SecurityException("Chỉ ADMIN mới được phép xóa sản phẩm");
+            throw new SecurityException("Chỉ ADMIN mới được phép xóa sản phẩm!");
         }
     }
 }
